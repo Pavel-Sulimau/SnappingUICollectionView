@@ -23,8 +23,7 @@ namespace SnappingUICollectionView.iOS.SnappingCollection
             {
                 BackgroundColor = UIColor.White,
                 ShowsHorizontalScrollIndicator = false,
-                DecelerationRate = UIScrollView.DecelerationRateFast,
-                ContentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.Always
+                DecelerationRate = UIScrollView.DecelerationRateFast
             };
 
             ItemsCollectionView.RegisterClassForCell(typeof(SnappingCollectionItemViewCell), SnappingCollectionItemViewCell.CellId);
