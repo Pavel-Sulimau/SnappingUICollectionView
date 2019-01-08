@@ -6,7 +6,7 @@ namespace SnappingUICollectionView.iOS.SnappingCollection
 {
     public class SnappingCollectionItemViewCell : UICollectionViewCell
     {
-        private SnappingCollectionItemView View { get; set; }
+        private SnappingCollectionItemView ItemView { get; set; }
 
         public SnappingCollectionItemViewCell(IntPtr handle) : base(handle)
         {
@@ -17,17 +17,17 @@ namespace SnappingUICollectionView.iOS.SnappingCollection
 
         public string Title
         {
-            get => View?.TitleLabel?.Text;
-            set => View.TitleLabel.Text = value;
+            get => ItemView?.TitleLabel?.Text;
+            set => ItemView.TitleLabel.Text = value;
         }
 
         private void LoadView()
         {
-            View = new SnappingCollectionItemView();
+            ItemView = new SnappingCollectionItemView();
 
-            ContentView.AddSubview(View);
+            ContentView.AddSubview(ItemView);
             ContentView.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
-            ContentView.AddConstraints(View.FullSizeOf(ContentView));
+            ContentView.AddConstraints(ItemView.FullSizeOf(ContentView));
         }
     }
 }

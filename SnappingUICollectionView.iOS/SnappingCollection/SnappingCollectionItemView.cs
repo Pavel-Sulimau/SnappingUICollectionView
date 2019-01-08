@@ -3,7 +3,7 @@ using UIKit;
 
 namespace SnappingUICollectionView.iOS.SnappingCollection
 {
-    public class SnappingCollectionItemView : UICollectionViewCell
+    public class SnappingCollectionItemView : UIView
     {
         public SnappingCollectionItemView()
         {
@@ -16,10 +16,7 @@ namespace SnappingUICollectionView.iOS.SnappingCollection
 
         private void SetupSubviews()
         {
-            BackgroundView = new UIView
-            {
-                BackgroundColor = UIColor.Green
-            };
+            BackgroundColor = UIColor.Green;
 
             TitleLabel = new UILabel
             {
